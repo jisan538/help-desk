@@ -1,25 +1,10 @@
-import {
-    Button,
-    Typography,
-    AppBar,
-    Avatar,
-    FormControl,
-    IconButton,
-    InputAdornment,
-    InputLabel,
-    Menu,
-    MenuItem,
-    OutlinedInput,
-    Toolbar,
-    Icon,
-    ListItemIcon,
-} from "@mui/material";
+import { Button, Typography, Avatar, Menu, MenuItem } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import React, { useState } from "react";
 import { Box } from "@mui/system";
 import Translate from "../Assets/Icons/Translate";
 import Language from "../Assets/language";
-export default function LanguageDrop() {
+export default function LanguageDropDown() {
     const [anchorUser, setAnchorUser] = useState(false);
     const [language, setLanguage] = useState("Ban");
     const handleOpenUserMenu = (event) => {
@@ -66,7 +51,11 @@ export default function LanguageDrop() {
                             onClick={() => handleChoose(data.value)}
                             sx={{ width: "180px" }}
                         >
-                            <Avatar src={data.flag} alt={data.value} sx={{mr:2}}/>
+                            <Avatar
+                                src={data.flag}
+                                alt={data.value}
+                                sx={{ mr: 2 }}
+                            />
                             <Typography textAlign="center">
                                 {data.name}
                             </Typography>

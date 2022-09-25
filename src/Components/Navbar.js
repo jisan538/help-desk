@@ -15,7 +15,8 @@ import {
 import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
-import LanguageDrop from "./LanguageDrop";
+import LanguageDropDown from "./LanguageDropDown";
+import NotificationDropDown from "./NotificationDropDown";
 
 const drawerWidth = 280;
 export default function Navbar({ handleDrawerToggle }) {
@@ -27,8 +28,8 @@ export default function Navbar({ handleDrawerToggle }) {
         setAnchorUser(null);
     };
     const settings = ["Profile", "Account", "Dashboard", "Logout"];
-    const [value, setValue] = useState("");
 
+    const [value, setValue] = useState("");
     const handleChange = (event) => {
         setValue(event.target.value);
     };
@@ -65,7 +66,10 @@ export default function Navbar({ handleDrawerToggle }) {
                     }}
                 >
                     <SearchBar handleChange={handleChange} value={value} />
-                    <LanguageDrop />
+                    <Box sx={{display:"flex", flexDirection:"row"}}>
+                        <LanguageDropDown />
+                        <NotificationDropDown />
+                    </Box>
                 </Box>
             </Toolbar>
         </AppBar>
