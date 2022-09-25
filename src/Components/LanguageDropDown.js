@@ -1,5 +1,6 @@
 import { Button, Typography, Avatar, Menu, MenuItem } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 import React, { useState } from "react";
 import { Box } from "@mui/system";
 import Translate from "../Assets/Icons/Translate";
@@ -26,7 +27,7 @@ export default function LanguageDropDown() {
                 >
                     {language}
                 </Typography>{" "}
-                <ExpandMoreIcon sx={{ color: "#7E8299" }} />
+                {anchorUser ? <ExpandLessOutlinedIcon sx={{ color: "#7E8299" }}/> : <ExpandMoreIcon sx={{ color: "#7E8299" }} />}
             </Button>
             <Menu
                 sx={{ mt: "45px" }}

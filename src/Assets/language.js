@@ -1,7 +1,7 @@
-import Bangladesh from "./bangladesh.png";
-import English from "./bangladesh.png";
-import Germany from "./bangladesh.png";
-import France from "./bangladesh.png";
+// import Bangladesh from "./bangladesh.png";
+// import English from "./bangladesh.png";
+// import Germany from "./bangladesh.png";
+// import France from "./bangladesh.png";
 
 const Language = [
     { id: 1, name: "Bangladesh", flag: "./bangladesh.png", value: "Ban" },

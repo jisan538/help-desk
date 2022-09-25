@@ -13,14 +13,7 @@ import AccountPopOver from "./AccountPopOver";
 
 const drawerWidth = 280;
 export default function Navbar({ handleDrawerToggle }) {
-    const [anchorUser, setAnchorUser] = useState(false);
-    const handleOpenUserMenu = (event) => {
-        setAnchorUser(event.currentTarget);
-    };
-    const handleCloseUserMenu = () => {
-        setAnchorUser(null);
-    };
-    const settings = ["Profile", "Account", "Dashboard", "Logout"];
+  
 
     const [value, setValue] = useState("");
     const handleChange = (event) => {
