@@ -1,22 +1,15 @@
 import {
     AppBar,
-    Avatar,
     Box,
-    FormControl,
     IconButton,
-    InputAdornment,
-    InputLabel,
-    Menu,
-    MenuItem,
-    OutlinedInput,
     Toolbar,
-    Typography,
 } from "@mui/material";
 import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
 import React, { useState } from "react";
 import SearchBar from "./SearchBar";
 import LanguageDropDown from "./LanguageDropDown";
 import NotificationDropDown from "./NotificationDropDown";
+import AccountPopOver from "./AccountPopOver";
 
 const drawerWidth = 280;
 export default function Navbar({ handleDrawerToggle }) {
@@ -69,6 +62,7 @@ export default function Navbar({ handleDrawerToggle }) {
                     <Box sx={{display:"flex", flexDirection:"row"}}>
                         <LanguageDropDown />
                         <NotificationDropDown />
+                        <AccountPopOver/>
                     </Box>
                 </Box>
             </Toolbar>
