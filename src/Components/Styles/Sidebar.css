@@ -1,0 +1,21 @@
+.active {
+    background: rgba(0, 171, 85, 0.08);
+    color: #00ab55;
+    width: 100%;
+    max-width: 245px;
+    border-radius: 10px;
+    height:"44px" 
+}
+.regular {
+    color: #637381;
+    width: 100%;
+    max-width: 245px;
+    border-radius: 10px;;
+    height:"44px" 
+}
+.active-icon {
+    color: #2065d1;
+}
+.icon {
+    color: #637381;
+}
