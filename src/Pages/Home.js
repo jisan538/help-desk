@@ -4,6 +4,7 @@ import Sidebar from "../Components/Sidebar.js";
 
 export default function Home() {
     const drawerWidth = 280;
+   
     return (
         <Box>
             <Sidebar />
@@ -16,7 +17,7 @@ export default function Home() {
                 }}
             >
                 <Toolbar />
-                <Typography variant="h5" sx={{ mb: 5, fontWeight:600}}>
+                <Typography variant="h5" sx={{ mb: 5, fontWeight: 600 }}>
                     Ticket Management
                 </Typography>
             </Box>
