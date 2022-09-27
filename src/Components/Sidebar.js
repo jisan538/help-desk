@@ -11,6 +11,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ReactLogo from "../Assets/Logo.svg";
 import Navbar from "./Navbar";
 import navConfig from "./NavConfig";
+import settings from "./Settings";
 
 import "./Styles/Sidebar.css";
 import { Button, Typography } from "@mui/material";
@@ -44,7 +45,7 @@ function Sidebar(props) {
     height:"44px",
     "&:hover": {
       backgroundColor: "#00AB55",
-      boxShadow: "0",
+      boxShadow: "none",
     },
   }));
   const { pathname } = useLocation();
@@ -72,13 +73,47 @@ function Sidebar(props) {
                 <ListItem
                   key={item.id}
                   disablePadding
-                  sx={{ ml: 1.5 }}
+                  sx={{ ml: 1.5}}
                   className={`${pathname === item.link ? "active" : "regular"}`}
                 >
                   <ListItemButton>
                     <ListItemIcon
                       sx={{
                         color: pathname === item.link ? "#2065d1" : "#637381",
+                        minWidth:"22px", mr:2
+                      }}
+                    >
+                      {item.icon}
+                    </ListItemIcon>
+                    <Typography
+                      sx={{
+                        fontSize: "14px",
+                        fontWeight: pathname === item.link ? 600 : 400,
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+                  </ListItemButton>
+                </ListItem>
+              </Link>
+            </>
+          ))}
+        </List>
+        <Typography sx={{ml:2, fontSize:"14px", fontWeight:700}}>Settings</Typography>
+        <List>
+          {settings.map((item) => (
+            <>
+              <Link to={item.link} style={linkStyle} key={item.id}>
+                <ListItem
+                  key={item.id}
+                  disablePadding
+                  sx={{ ml: 1.5}}
+                  className={`${pathname === item.link ? "active" : "regular"}`}
+                >
+                  <ListItemButton>
+                    <ListItemIcon
+                      sx={{
+                        color: pathname === item.link ? "#2065d1" : "#637381",minWidth:"22px", mr:2
                       }}
                     >
                       {item.icon}
