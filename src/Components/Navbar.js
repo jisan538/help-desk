@@ -3,6 +3,7 @@ import {
     Box,
     IconButton,
     Toolbar,
+    useMediaQuery,
 } from "@mui/material";
 import MenuOpenRoundedIcon from "@mui/icons-material/MenuOpenRounded";
 import React, { useState } from "react";
@@ -19,6 +20,8 @@ export default function Navbar({ handleDrawerToggle }) {
     const handleChange = (event) => {
         setValue(event.target.value);
     };
+    const matches = useMediaQuery('(min-width:567px)');
+
     return (
         <AppBar
             position="fixed"
@@ -51,7 +54,7 @@ export default function Navbar({ handleDrawerToggle }) {
                         width: "100%",
                     }}
                 >
-                    <SearchBar handleChange={handleChange} value={value} />
+                    {matches && <SearchBar handleChange={handleChange} value={value} />}
                     <Box sx={{display:"flex", flexDirection:"row"}}>
                         <LanguageDropDown />
                         <NotificationDropDown />
